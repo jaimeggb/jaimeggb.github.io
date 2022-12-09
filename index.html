@@ -1,1 +1,128 @@
-"Hello World" 
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Jaime Gonzalez <br> Garcia-Bernardo</h1>
+            <h2>Engineer</h2>
+            <a href="#" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/spain-telecoms-map.jpg">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Map-data-scraper</h3>
+                        <p>
+                            In this project I created a scraper that accesses a map provided by the spanish ministry of telecoms and saves all of the useful data in it on mobile towers in Spain in an SQL database table and in a CSV file. The map is located <a href="https://geoportal.minetur.gob.es/VCTEL/vcne.do">here</a> 
+                        </p>
+                        <a href="https://github.com/jaimeggb/Map-data-scraper">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/regulator-example-data.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Regulator-data-downloader</h3>
+                        <p>
+                            In this project I created a program that downloads data from the spanish telecoms regulator (example data shown above) automatically into a folder it creates so that you don't have to do it manually which takes ages. This program can save a strategy consulting firm many man-hours per year.
+			</p>
+                        <a href="https://github.com/jaimeggb/Regulator-data-downloader">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+		    
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/ice-cream-cropped.jpeg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>food-vision-app-deployed-in-GCP</h3>
+                        <p>
+                            In this project I deployed a machine learning based app that classifies images of up 12 different types of food to the whole world using Google Cloud Platform.
+			</p>
+                        <a href="https://github.com/jaimeggb/food-vision-app-deployed-in-GCP">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2022</span> Jaime Gonzalez Garcia-Bernardo
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/jaimeggb" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/16983560/jaime" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/jaime-gonzalez-gb/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
