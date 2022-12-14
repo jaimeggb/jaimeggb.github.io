@@ -1,128 +1,536 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-</head>
-
-<body>
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Jaime Gonzalez <br> Garcia-Bernardo</h1>
-            <h2>Engineer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Portfolio</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="mobile-menu-open" class="shadow-large">
+            <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
+        <!-- End #mobile-menu-toggle -->
+        <header>
+            <div id="mobile-menu-close">
+                <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <ul id="menu" class="shadow">
+                <li>
+                    <a href="#selected-projects">Selected projects</a>
+                </li>
+                <li>
+                    <a href="#web-dev-projects">Computer programming projects</a>
+                </li>
+                <li>
+                    <a href="#ml-projects">ML projects</a>
+                </li>
+            </ul>
+        </header>
+        <!-- End header -->
+        <div id="lead">
+            <div id="lead-content">
+                <h1>Jaime Gonzalez <br> Garcia-Bernardo</h1>
+                <h2>Engineer</h2>
+                <a href="#" class="btn-rounded-white">Download Resume</a>
+            </div>
+            <!-- End #lead-content -->
+            <div id="lead-overlay"></div>
+            <div id="lead-down">
+                <span>
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
+                </span>
+            </div>
+            <!-- End #lead-down -->
         </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
+        <!-- End #lead -->
+        <div id="selected-projects" class="background-alt">
+            <h2 class="heading">Selected projects</h2>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom:50px;">
+                <h3 style="font-size: 1em; font-weight: 300; color: #374054; margin: 0 0 15px 30px; max-width: 100%; text-align: left">
+                    I selected these projects because they are ones I was genuinely interested in and solved real world problems that I encountered in the past, they are not simply projects I had to complete for the sake of learning a new tool or concept or obtatining a certification.
+                </h3>
+            </div>
+            <div class="container">
+                <div class="row">
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/spain-telecoms-map.jpg">
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/spain-telecoms-map.jpg">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Map-data-scraper</h3>
+                            <p>
+                                In this project I created a scraper that accesses a map provided by the spanish ministry of telecoms and saves all of the useful data in it on mobile towers in Spain in an SQL database table and in a CSV file. The map is located <a href="https://geoportal.minetur.gob.es/VCTEL/vcne.do">here</a>. In this project I created a program that allows users to access and scrape a map provided by the Spanish Ministry of Telecoms and save the useful data on mobile towers in Spain in an SQL database table and in a CSV file. The program is written in Python and uses Jupyter Notebooks for computing, SQL for managing the database, and Git for file version control.
+                            </p>
+                            <a href="https://github.com/jaimeggb/Map-data-scraper">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
                     </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Map-data-scraper</h3>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Regulator-data-downloader</h3>
+                            <p>
+                                In this project, I developed a computer program using Python, Pandas, and Jupyter notebooks that automates the process of downloading data from the Spanish telecoms regulator. The program creates a folder to store the downloaded data, allowing users to save time and effort by avoiding the need to manually download the data. This program has the potential to save a telecoms strategy consulting firms significant amounts of time and effort. The program can be accessed by forking the repository and running the provided Jupyter notebook file. Additionally, the repository includes notebook files for creating useful plots from the downloaded data.
+                            </p>
+                            <a href="https://github.com/jaimeggb/Regulator-data-downloader">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/ice-cream-cropped.jpeg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Machine learning </h3>
+                            <p>
+                                In this project, I deployed a machine learning web application called "Food Vision" on Google Cloud that classifies images of up 12 different types of food. The web application uses Streamlit and uses Google Cloud's App Engine and AI Platform to classify images of food. By doing this project I learned how to deploy a Streamlit-powered web application using Google Cloud, how to use App Engine and AI Platform, and how to debug Streamlit deployments. I also learned about the cost of running machine learning apps on Google Cloud. The project uses technologies such as Google App Engine, AI Platform, Storage, Colab notebooks, Git Bash, and Git for version control.
+                            </p>
+                            <a href="https://github.com/jaimeggb/food-vision-app-deployed-in-GCP">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/ice-cream-cropped.jpeg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Habit tracker web app</h3>
+                            <p>
+                                In this project, I created a web page that hosts a habit tracker for its users. The habit tracker is based on the one proposed by James Clear in his book 'Atomic Habits'. I used HTML, CSS, and JavaScript to create the web page, and it has a table layout with interactive onclick events. The goal of the habit tracker is to help users develop positive habits and achieve their goals by providing visibility and accountability for their actions. Users can track a wide range of habits, and by regularly monitoring their habits, they can gain insights into their behavior and identify areas for improvement. I use it regularly to track the sports and exercise I do.
+                            </p>
+                            <a href="https://replit.com/@jaimeggb/Habit-tracker-template-7">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/ice-cream-cropped.jpeg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Forest cover classification</h3>
+                            <p>
+                                This project is a machine learning project that uses deep learning to predict forest cover type based on cartographic variables. The forest cover type is determined by data from the US Forest Service, and the independent variables are derived from data obtained from the US Geological Survey and USFS. The goal of the project is to develop a classifier for this multi-class classification problem using TensorFlow with Keras. The project also aims to use hyperparameter tuning to improve the performance of the model, and to create clean and modular code. Technologies used in the project include Python, Jupyter notebooks, pandas, numpy, TensorFlow, scikit-learn, seaborn, matplotlib, and git.
+                            </p>
+                            <a href="https://github.com/jaimeggb/Forest-Cover-Classification">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
+            </div>
+        </div>
+        <!-- End #projects -->
+        <div id="web-dev-projects" class="background-alt">
+            <h2 class="heading">Computer programming projects</h2>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom:50px;">
+            <h3 style="font-size: 1em; font-weight: 300; color: #374054; margin: 0 0 15px 30px; max-width: 100%; text-align: left">
+                These projects cover a range of topics related to computer programming and web development. The main topics covered are:
+                <ol>
+                    <li>Responsive Web Design (HTML & CSS)</li>
+                    <li>Algorithms and Data Structures (JavaScript)</li>
+                    <li>Front End Development Libraries (React.js, Redux.js, Bootstrap, jQuery, Sass)</li>
+                    <li>Data Visualization (D3.js)</li>
+                    <li>Back End Development and APIs (Node.js & Express.js)</li>
+                    <li>Quality Assurance (JavaScript, Chai, Node.js, Express.js, Pug, Passport, Socket.io)</li>
+                    <li>Scientific computing (Python, SQLite, JSON, XML)</li>
+                    <li>Data analysis (Python, SQL, Pandas, Numpy, Matplotlib, Seaborn, Jupyter)</li>
+                    <li>Information security (Python & Helmet.js)</li>
+                </ol>
+            </h3>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Responsive web design projects</h3>
+                            <p>In these projects, hosted on CodePen, I created responsive websites using HTML and CSS:</p>
+                            <ul>
+                                <li><a href="https://codepen.io/JGGB/full/poNmVwm?editors=1100">JS technical documentation page</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/mdOQZYo">Dr. Norman Borlaug tribute page</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/zYoeKvz?editors=1100">FreeCodeCamp survey form</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/Habit-tracker-template-7">Habit tracker web app</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Javascript algorithms and data structures projects</h3>
+                            <p>In these projects, hosted on freeCodeCamp, I implemented solutions to algorithmic problems using JavaScript:</p>
+                            <ul>
+                                <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/palindrome-checker">Palindrome checker</a></li>
+                                <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/roman-numeral-converter">Roman numeral converter</a></li>
+                                <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/caesars-cipher">Caesar's cipher</a></li>
+                                <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/telephone-number-validator">Telephone number validator</a></li>
+                                <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/cash-register">Cash register</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Front end libraries projects</h3>
+                            <p>In these projects, hosted on CodePen, I created websites using React.js, a JavaScript library used to build user interfaces for web and mobile applications:</p>
+                            <ul>
+                                <li><a href="https://codepen.io/JGGB/full/PopOaZP">Random quote machine</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/xxqpJwo">Markdown previewer with React.js</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/gOmvmQZ">Drum machine with React.js</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/qBrMxVb">Javascript calculator with React.js</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/MWpLRrW">Pomodoro clock with React.js</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Data visualization projects</h3>
+                            <p>In these projects, hosted on CodePen, I created interactive visualizations using D3.js, an open-source JavaScript library for web browsers.:</p>
+                            <ul>
+                                <li><a href="https://codepen.io/JGGB/full/oNWYYML">Kickstarter pledges tree map</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/OJmXBdB">US Educational Attainment choropleth map</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/mdmPwmZ">Monthly Global Land-Surface Temperature heat map</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/qBmdJxJ">Doping in Professional Bicycle Racing scatter plot</a></li>
+                                <li><a href="https://codepen.io/JGGB/full/GRWVBrX">US GDP (1947-2015) bar chart</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Back End Development and APIs projects</h3>
+                            <p>In these projects, hosted on Replit, I created APIs using Node.js and Express.js. Node.js is a JavaScript runtime, and Express.js is a web framework for Node.js:</p>
+                            <ul>
+                                <li><a href="https://replit.com/@jaimeggb/filemetadata#server.js">File metadata</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/exercisetracker#server.js">Exercise tracker</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/urlshortener#server.js">URL shortener</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/headerparser#server.js">Header parser</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/timestamp#server.js">Timestamp</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Information security projects</h3>
+                            <p>In these projects, hosted on Replit and Boilerplate, I applied the principles of information security to create secure applications:</p>
+                            <ul>
+                                <li><a href="https://boilerplate-project-stockchecker-4.jaimeggb.repl.co/">Stock price checker</a></li>
+                                <li><a href="https://messageboard.jaimeggb.repl.co/">Anonymous message board</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/port-scanner#port_scanner.py">Port scanner</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/SHA-1-password-cracker#password_cracker.py">SHA-1 password cracker</a></li>
+                                <li><a href="https://secure-real-time-multiplayer-game-4.jaimeggb.repl.co/">Secure real time multiplayer game</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Scientific computing projects with Python</h3>
+                            <p>In these projects, hosted on Replit, I used Python to perform scientific computing tasks such as data analysis, arithmetic operations, and probability calculations:</p>
+                            <ul>
+                                <li><a href="https://replit.com/@jaimeggb/arithmetic-formatter#arithmetic_arranger.py">Arithmetic Formatter</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/time-calculator#main.py">Time Calculator</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/budget-app#budget.py">Budget App</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/polygon-area-calculator#main.py">Polygon Area Calculator</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/probability-calculator#.replit">Probability Calculator</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Quality Assurance projects</h3>
+                            <p>In these projects, hosted on Replit, I created web applications with tests using Jest. Jest is a JavaScript testing framework developed by Facebook for testing JavaScript code:</p>
+                            <ul>
+                                <li><a href="https://replit.com/@jaimeggb/american-british-english-translator-vF#server.js">American to British translator</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/sudoku-solver#server.js">Sudoku solver</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/library#server.js">Library</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/issuetracker#server.js">Issue tracker</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/metricimpconverter#server.js">Metric to imperial converter</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Data analysis with Python projects</h3>
+                            <p>In these projects, hosted on Replit, I used Python to analyze and visualize data:</p>
+                            <ul>
+                                <li><a href="https://replit.com/@jaimeggb/mean-variance-standard-deviation-calculator">Mean-Variance-Standard Deviation Calculator</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/demographic-data-analyzer#demographic_data_analyzer.py">Demographic Data Analyzer</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/medical-data-visualizer#medical_data_visualizer.py">Medical Data Visualizer</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/page-view-time-series-visualizer#line_plot.png">Page View Time Series Visualizer</a></li>
+                                <li><a href="https://replit.com/@jaimeggb/sea-level-predictor#sea_level_predictor.py">Sea Level Predictor</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
+            </div>
+        </div>
+        <!-- End #projects -->
+        <div id="ml-projects" class="background-alt">
+            <h2 class="heading">Machine learning projects</h2>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom:50px;">
+                <h3 style="font-size: 1em; font-weight: 300; color: #374054; margin: 0 0 15px 30px; max-width: 100%; text-align: left">
+                    This section shows a collection of machine learning projects completed in various specializations and certifications. The projects cover a range of topics, including supervised and unsupervised learning, deep learning, TensorFlow, and MLOps. The projects were completed using tools such as Python, NumPy, scikit-learn, TensorFlow, Google Cloud Platform, Docker and Kubernetes.
+                </h3>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Machine learning specialization projects</h3>
+                            <p>In this specialization delivered by Stanford's famous Andrew Ng via his company Deeplearning.AI I built and trained machine learning models in Octave and Python using NumPy and scikit-learn. The projects covered supervised learning (regression, binary and multi-class classification) unsupervised learning (clustering, anomaly detection, recommender systems with collaborative filtering and content-based deep learning, deep reinforcement learning)</p>
+                            <ul>
+                                <li><a href="https://www.coursera.org/learn/machine-learning?specialization=machine-learning-introduction#syllabus">Supervised Machine Learning: Regression and Classification</a></li>
+                                <li><a href="https://www.coursera.org/learn/advanced-learning-algorithms?specialization=machine-learning-introduction#syllabus">Advanced Learning Algorithms</a></li>
+                                <li><a href="https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning?specialization=machine-learning-introduction#syllabus">Unsupervised Learning, Recommenders, Reinforcement Learning</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Deep learning specialization projects</h3>
+                            <p>In these projects I built and trained deep neural networks from their most basic elements using Python and applied them to various tasks, such as visual detection, recognition and natural language processing:</p>
+                            <ul>
+                                <li><a href="https://github.com/amanchadha/coursera-deep-learning-specialization/tree/master/C1%20-%20Neural%20Networks%20and%20Deep%20Learning">Neural Networks and Deep Learning</a></li>
+                                <li><a href="https://github.com/amanchadha/coursera-deep-learning-specialization/tree/master/C2%20-%20Improving%20Deep%20Neural%20Networks%20Hyperparameter%20tuning%2C%20Regularization%20and%20Optimization">Hyperparameter tuning, Regularization and Optimization</a></li>
+                                <li><a href="https://github.com/amanchadha/coursera-deep-learning-specialization/tree/master/C3%20-%20Structuring%20Machine%20Learning%20Projects">Structuring Machine Learning Projects</a></li>
+                                <li><a href="https://github.com/amanchadha/coursera-deep-learning-specialization/tree/master/C4%20-%20Convolutional%20Neural%20Networks">Convolutional Neural Networks</a></li>
+                                <li><a href="https://github.com/amanchadha/coursera-deep-learning-specialization/tree/master/C5%20-%20Sequence%20Models">Sequence Models</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>TensorFlow developer certificate projects</h3>
+                            <p>In these projects I used TensorFlow to build different types of machine learning models suited to different types of applications, such as computer vision, classification, regression, natural language processing or time series prediction:</p>
+                            <ul>
+                                <li><a href="https://github.com/williamcwi/DeepLearning.AI-TensorFlow-Developer-Professional-Certificate/tree/master/1.%20Introduction%20to%20TensorFlow%20for%20Artificial%20Intelligence%2C%20Machine%20Learning%2C%20and%20Deep%20Learning">Intro to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</a></li>
+                                <li><a href="https://github.com/williamcwi/DeepLearning.AI-TensorFlow-Developer-Professional-Certificate/tree/master/2.%20Convolutional%20Neural%20Networks%20in%20TensorFlow">Convolutional Neural Networks in TensorFlow</a></li>
+                                <li><a href="https://github.com/williamcwi/DeepLearning.AI-TensorFlow-Developer-Professional-Certificate/tree/master/3.%20Natural%20Language%20Processing%20in%20TensorFlow">Natural Language Processing in TensorFlow</a></li>
+                                <li><a href="https://github.com/williamcwi/DeepLearning.AI-TensorFlow-Developer-Professional-Certificate/tree/master/4.%20Sequences%2C%20Time%20Serirs%20and%20Prediction">Sequences, Time Series and Prediction</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Tensorflow data and deployment certificate projects</h3>
+                            <p>In these projects, I deployed machine learning models in browsers and mobile applications, gained experience with TensorFlow data services and APIs, as well as with techniques for processing unstructured data and maintaining data privacy, using tools such as TensorFlow Serving, TensorFlow Hub, and TensorBoard.</p>
+                            <ul>
+                                <li><a href="https://github.com/sergejhorvat/TensorFlow-Data-and-Deployment-Specialization/tree/master/Browser-based%20Models%20with%20TensorFlow">Browser-based Models with TensorFlow.js</a></li>
+                                <li><a href="https://github.com/sergejhorvat/TensorFlow-Data-and-Deployment-Specialization/tree/master/Advanced%20Deployment%20Scenarios%20with%20TensorFlow">Adanced deployment scenarios</a></li>
+                                <li><a href="https://github.com/sergejhorvat/TensorFlow-Data-and-Deployment-Specialization/tree/master/Data%20Pipelines%20with%20TensorFlow%20Data%20Services">Data Pipelines with TensorFlow Data Services</a></li>
+                                <li><a href="https://github.com/sergejhorvat/TensorFlow-Data-and-Deployment-Specialization/tree/master/Device-based%20Models%20with%20TensorFlow">Device-based Models with TensorFlow Lite</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Google Cloud Platform pro machine learning engineer projects</h3>
+                            <p>Click on each line to expand it and see the labs associated with each. You can find all labs <a href="https://www.coursera.org/professional-certificates/preparing-for-google-cloud-machine-learning-engineer-professional-certificate#courses">here</a>:</p>
+                            <ul>
+                                <li>
+                                    <details>
+                                        <summary>Google Cloud Big Data and Machine Learning Fundamentals</summary>
+                                <li>Exploring a BigQuery Public Dataset</li>
+                                <li>Creating a streaming data pipeline for a Real-Time dashboard with Dataflow</li>
+                                <li>Predicting Visitor Purchases Using BigQuery</li>
+                                <li>Predicting loan risk with AutoML</li>
+                                </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary>How Google does Machine Learning</summary>
+                                <li>Using an image dataset to train an AutoML model</li>
+                                <li>Training an AutoML video classification model</li>
+                                <li>Vertex AI Model Builder SDK: Training and Making Predictions on an AutoML Model</li>
+                                </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary>Launching into Machine Learning</summary>
+                                <li>Improve the quality of your data</li>
+                                <li>Explore the data using Python and BigQuery</li>
+                                <li>Introduction to linear regression</li>
+                                <li>Training an AutoML classification model (Structured data)</li>
+                                <li>Using BigQuery ML to predict penguin weight (BigQuery ML & Explainable AI)</li>
+                                <li>Using the BigQuery ML hyperparameter tuning to improve model performance</li>
+                                </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary>TensorFlow on Google Cloud</summary>
+                                <li>TensorFlow Dataset API</li>
+                                <li>Classifying structured data using Keras preprocessing layers</li>
+                                <li>Introducing the Keras Sequential API on Vertex AI Platform</li>
+                                <li>Build a DNN using the Keras Functional API on Vertex AI Platform</li>
+                                <li>Making new layers and models via subclassing</li>
+                                <li>Training at scale with the Vertex AI Training Service</li>
+                                </details>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="images/regulator-example-data.jpg" />
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Machine Learning Engineering for Production (MLOps) Specialization projects</h3>
+                            <p>Click on each line to expand it and see the labs associated with each. You can find all labs <a href="https://www.coursera.org/learn/deploying-machine-learning-models-in-production?specialization=machine-learning-engineering-for-production-mlops#syllabus">here</a>:</p>
+                            <ul>
+                                <li>
+                                    <details>
+                                        <summary>Deploying Machine Learning Models in Production</summary>
+                                <li>Intro to Docker and installation</li>
+                                <li>First look at Tensorflow Serving with Docker</li>
+                                <li>Serve a model with TensorFlow Serving</li>
+                                <li>Deploy a ML model with fastAPI and Docker</li>
+                                <li>Practice Kubernetes in your Local Environment</li>
+                                <li>Load testing servers with Docker Compose and Locust</li>
+                                <li>Building ML Pipelines with Kubeflow</li>
+                                <li>Model versioning with Tensorflow Serving and Docker</li>
+                                <li>Intro to CI/CD pipelines with GitHub Actions</li>
+                                <li>Developing Custom TFX Components</li>
+                                </details>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
+            </div>
+        </div>
+        <!-- End #projects -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 copyright">
                         <p>
-                            In this project I created a scraper that accesses a map provided by the spanish ministry of telecoms and saves all of the useful data in it on mobile towers in Spain in an SQL database table and in a CSV file. The map is located <a href="https://geoportal.minetur.gob.es/VCTEL/vcne.do">here</a> 
+                            Copyright &copy; <span id="current-year">2022</span> Jaime Gonzalez Garcia-Bernardo
                         </p>
-                        <a href="https://github.com/jaimeggb/Map-data-scraper">View Project</a>
                     </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/regulator-example-data.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Regulator-data-downloader</h3>
-                        <p>
-                            In this project I created a program that downloads data from the spanish telecoms regulator (example data shown above) automatically into a folder it creates so that you don't have to do it manually which takes ages. This program can save a strategy consulting firm many man-hours per year.
-			</p>
-                        <a href="https://github.com/jaimeggb/Regulator-data-downloader">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-		    
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/ice-cream-cropped.jpeg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>food-vision-app-deployed-in-GCP</h3>
-                        <p>
-                            In this project I deployed a machine learning based app that classifies images of up 12 different types of food to the whole world using Google Cloud Platform.
-			</p>
-                        <a href="https://github.com/jaimeggb/food-vision-app-deployed-in-GCP">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2022</span> Jaime Gonzalez Garcia-Bernardo
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
+                    <div class="col-sm-2 top">
+                        <span id="to-top">
                         <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/jaimeggb" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://stackoverflow.com/users/16983560/jaime" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/jaime-gonzalez-gb/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                        </span>
+                    </div>
+                    <div class="col-sm-5 social">
+                        <ul class="center">
+                            <li>
+                                <a href="https://github.com/jaimeggb" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://stackoverflow.com/users/16983560/jaime" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jaime-gonzalez-gb/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- End footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-</body>
-
+        </footer>
+        <!-- End footer -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/scripts.min.js"></script>
+    </body>
 </html>

@@ -1,52 +1,92 @@
 /*! Title: Dev Portfolio Template Version: 1.2.2 Last Change: 03/25/2020 Author: Ryan Fitzgerald Repo: https://github.com/RyanFitzgerald/devportfolio-template Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues Description: This file contains all the styles associated with the page that don't come from third party libraries. This file gets compiled using Gulp and send to the /css folder which is then loaded on the page. */
-body{
-    font-family:'Lato', sans-serif;
-    font-size:16px
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    overflow: auto;
+    width: 100%;
 }
-body.active{
-    overflow:hidden;
-    z-index:-1
+
+body.active {
+    overflow: hidden;
+    z-index: -1;
 }
-.no-js #experience-timeline>div{
-    background:#fff;
-    padding:10px;
-    margin-bottom:10px;
-    border:1px solid #dcd9d9
+
+.no-js #experience-timeline>div {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dcd9d9;
 }
-.no-js #experience-timeline>div h3{
-    font-size:1.5em;
-    font-weight:300;
-    color:#374054;
-    display:inline-block;
-    margin:0
+
+.no-js #experience-timeline>div h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    display: inline-block;
+    margin: 0;
 }
-.no-js #experience-timeline>div h4{
-    font-size:1.2em;
-    font-weight:300;
-    color:#7e8890;
-    margin:0 0 15px 0
+
+.no-js #experience-timeline>div h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #7e8890;
+    margin: 0 0 15px 0;
 }
-.no-js #experience-timeline>div p{
-    color:#74808a;
-    font-size:0.9em;
-    margin:0
+
+.no-js #experience-timeline>div p {
+    color: #74808a;
+    font-size: 0.9em;
+    margin: 0;
 }
-.no-js #experience-timeline:before,.no-js #experience-timeline:after{
-    content:none
+
+.no-js #experience-timeline:before, .no-js #experience-timeline:after {
+    content: none;
 }
-@keyframes dropHeader{
-    0%{
-        transform:translateY(-100%)
+
+ul {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #74808a;
+  margin: 0;
+  text-align: left;
+}
+
+details li {
+  margin-left: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+li {
+  font-size: 0.9em;
+  margin: 0 0 15px 0;
+  list-style-type: disc;
+}
+
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-100%);
     }
-    100%{
-        transform:translateY(0)
+    100% {
+        transform: translateY(0);
     }
 }
-header{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     text-align:center;
     z-index:10;
     animation-name:dropHeader;
@@ -442,13 +482,22 @@ footer{
     color:#374054;
     margin-bottom:50px
 }
+#projects h3{
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    margin: 0 0 15px 0;
+    text-align: left;
+}
 .project{
     position:relative;
     max-width:900px;
     margin:0 auto 30px auto;
-    overflow:hidden;
+    overflow:auto;
     background:#fff;
-    border-radius:4px
+    border-radius:4px;
+    scroll-behavior: smooth;
+    height: 335px
 }
 .project-image{
     float:left
@@ -468,8 +517,9 @@ footer{
 }
 .project-info p{
     color:#74808a;
-    margin:0 0 15px 0;
-    font-size:0.9em
+    margin: 15px 15px 15px 15px;
+    font-size:0.9em;
+    text-align: left
 }
 .no-image .project-info{
     position:relative;
@@ -480,6 +530,160 @@ footer{
 #more-projects{
     display:none
 }
+
+#selected-projects{
+    padding:50px 15px;
+    border-bottom:1px solid #dcd9d9;
+    text-align:center
+}
+#selected-projects h2{
+    color:#374054;
+    margin-bottom:15px
+}
+.selected-project{
+    position:relative;
+    max-width:900px;
+    margin:0 auto 30px auto;
+    overflow:auto;
+    background:#fff;
+    border-radius:4px;
+    scroll-behavior: smooth;
+    height: 335px
+}
+.selected-project-image{
+    float:left
+}
+.selected-project-info{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    margin-left:300px;
+    padding:15px
+}
+.selected-project-info h3{
+    font-size:1.5em;
+    font-weight:300;
+    color:#374054;
+    margin:0 0 15px 0
+}
+.selected-project-info p{
+    color:#74808a;
+    margin: 15px 15px 15px 15px;
+    font-size:0.9em;
+    text-align: left
+}
+.no-image .selected-project-info{
+    position:relative;
+    margin:0;
+    padding:30px 15px;
+    transform:none
+}
+#more-selected-projects{
+    display:none
+}
+
+#web-dev-projects{
+    padding:50px 15px;
+    border-bottom:1px solid #dcd9d9;
+    text-align:center
+}
+#web-dev-projects h2{
+    color:#374054;
+    margin-bottom:50px
+}
+.web-dev-project{
+    position:relative;
+    max-width:900px;
+    margin:0 auto 30px auto;
+    overflow:auto;
+    background:#fff;
+    border-radius:4px;
+    scroll-behavior: smooth;
+    height: 335px
+}
+.web-dev-project-image{
+    float:left
+}
+.web-dev-project-info{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    margin-left:300px;
+    padding:15px
+}
+.web-dev-project-info h3{
+    font-size:1.5em;
+    font-weight:300;
+    color:#374054;
+    margin:0 0 15px 0
+}
+.web-dev-project-info p{
+    color:#74808a;
+    margin: 15px 15px 15px 15px;
+    font-size:0.9em;
+    text-align: left
+}
+.no-image .web-dev-project-info{
+    position:relative;
+    margin:0;
+    padding:30px 15px;
+    transform:none
+}
+#more-web-dev-projects{
+    display:none
+}
+
+#ml-projects{
+    padding:50px 15px;
+    border-bottom:1px solid #dcd9d9;
+    text-align:center
+}
+#ml-projects h2{
+    color:#374054;
+    margin-bottom:50px
+}
+.ml-project{
+    position:relative;
+    max-width:900px;
+    margin:0 auto 30px auto;
+    overflow:auto;
+    background:#fff;
+    border-radius:4px;
+    scroll-behavior: smooth;
+    height: 335px
+}
+.ml-project-image{
+    float:left
+}
+.ml-project-info{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    margin-left:300px;
+    padding:15px
+}
+.ml-project-info h3{
+    font-size:1.5em;
+    font-weight:300;
+    color:#374054;
+    margin:0 0 15px 0
+}
+.ml-project-info p{
+    color:#74808a;
+    margin: 15px 15px 15px 15px;
+    font-size:0.9em;
+    text-align: left
+}
+.no-image .ml-project-info{
+    position:relative;
+    margin:0;
+    padding:30px 15px;
+    transform:none
+}
+#more-ml-projects{
+    display:none
+}
+
 #skills{
     padding:50px 15px;
     text-align:center
