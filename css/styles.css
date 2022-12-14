@@ -589,7 +589,7 @@ footer{
 }
 #web-dev-projects h2{
     color:#374054;
-    margin-bottom:50px
+    margin-bottom:15px
 }
 .web-dev-project{
     position:relative;
@@ -640,7 +640,7 @@ footer{
 }
 #ml-projects h2{
     color:#374054;
-    margin-bottom:50px
+    margin-bottom:15px
 }
 .ml-project{
     position:relative;
