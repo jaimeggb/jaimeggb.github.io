@@ -500,7 +500,8 @@ footer{
     height: 335px
 }
 .project-image{
-    float:left
+    float:left;
+    margin-top: 15px;
 }
 .project-info{
     position:absolute;
