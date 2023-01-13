@@ -685,6 +685,58 @@ footer{
     display:none
 }
 
+#data-science-projects{
+     padding:50px 15px;
+     border-bottom:1px solid #dcd9d9;
+     text-align:center;
+}
+ #data-science-projects h2{
+     color:#374054;
+     margin-bottom:15px;
+}
+ .data-science-project{
+     position:relative;
+     max-width:900px;
+     margin:0 auto 30px auto;
+     overflow:auto;
+     background:#fff;
+     border-radius:4px;
+     scroll-behavior: smooth;
+     height: 335px;
+}
+ .data-science-project-image{
+     float:left;
+}
+ .data-science-project-info{
+     position:absolute;
+     top:50%;
+     transform:translateY(-50%);
+     margin-left:300px;
+     padding:15px;
+}
+ .data-science-project-info h3{
+     font-size:1.5em;
+     font-weight:300;
+     color:#374054;
+     margin:0 0 15px 0;
+}
+ .data-science-project-info p{
+     color:#74808a;
+     margin: 15px 15px 15px 15px;
+     font-size:0.9em;
+     text-align: left;
+}
+ .no-image .data-science-project-info{
+     position:relative;
+     margin:0;
+     padding:30px 15px;
+     transform:none;
+}
+ #more-data-science-projects{
+     display:none;
+}
+
+
 #skills{
     padding:50px 15px;
     text-align:center
